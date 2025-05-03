@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            margin: 100px 450px;
+        }
+        .card {
+            width: 450px;
+            border: 10px solid;
+            background-color: blue;
+        }
+
+        .convert-button button {
+            padding: 8px 100px;
+            margin-bottom: 10px;
+            background-color: yellow;
+        }
+
+        .card-2 {
+            padding: 10px;
+        }
+        .card-amount input,
+        .convert-button button,
+        .hi input {
+            width: 100%;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="img">
+                    <img src="/images/CurrencyConverter.png" alt="" height="100%" width="100%">
+                </div>
+                <div class="card-2">
+                    <div class="card-info">
+                        <h4>currency Converter</h4>
+                    </div>
+                    <div class="card-amount">
+                        <p>Amount :</p>
+                        <input type="text" id="get">
+                    </div>
+                    <div class="convert-count">
+                        <select onchange="flow1()">
+                            <option id="Usd" value="">USD</option>
+                            <option id="china" value="">China</option>
+                            <option id="russia" value="">Russia</option>
+                            <option id="vietnam" value="">vietnam</option>
+                            <option id="japan" value="">japan</option>
+                        </select>
+                        <select id="set" >
+                            <option id="dollar" value="87.15">Dollar</option>
+                            <option id="yuan" value="12.03">Yuan</option>
+                            <option id="ruble" value="12.01">Ruble</option>
+                            <option id="dong" value="0.0034">đồng</option>
+                            <option id="yen" value="1.70">yen</option>
+                        </select>
+                    </div>
+                    <div class="convert-button">
+                        <button onclick="return t1()"><a href="">Convert</a></button>
+                    </div>
+                    <div class="hi">
+                        <input type="text" value="" id="valuu1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        Inp = document.getElementById('get')
+
+        I10 = document.getElementById('set')
+
+        new1 = document.getElementById('valuu1')
+
+        select1 = document.getElementById('Usd')
+
+        select2 = document.getElementById('dollar')
+
+        function t1() {
+            new1.value = Inp.value * I10.value;
+            return false;
+        }
+    </script>
+</body>
+
+</html>
